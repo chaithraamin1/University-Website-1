@@ -1,0 +1,225 @@
+//-----------------------header-------------------------------
+.header {
+    min-height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/eduford_img/background.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+.header h1{
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+
+}
+
+
+.fa-bars {
+    display: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 6%;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+
+}
+
+.nav-links ul li {
+    position: relative;
+
+}
+
+.logo {
+    width: 140px;
+}
+
+.nav-links ul li::after {
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    background: red;
+    display: block;
+    content: '';
+    transition: 0.5s;
+    margin: auto;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: white;
+    width: 90%;
+}
+
+.text-box h1 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 50px;
+
+}
+
+.text-box p {
+    font-size: 13px;
+    margin-bottom: 40px;
+}
+
+.text-box a {
+    text-decoration: none;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-size: 13px;
+    transition: 0.5s;
+}
+
+.text-box a:hover {
+    background: tomato;
+}
+
+.fa-close {
+    display: none;
+    color: white;
+    float: left;
+    margin: 10px;
+}
+
+
+@media screen and (max-width:700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    nav {
+        padding: 0;
+    }
+
+    .nav-links {
+        position: fixed;
+        height: 100vh;
+        width: 200px;
+        background-color: red;
+        right: -200px;
+        z-index: 1;
+        top: 0;
+        text-align: right;
+        transition: 0.5s;
+    }
+
+    .nav-links ul li {
+        display: block;
+        padding: 0 30px;
+    }
+
+    .fa-close {
+        display: block;
+    }
+
+
+}
+
+
+// --------------------Footer-----------------------
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.icons i{
+    margin: 20px 20px;
+    color: red;
+}
+
+// -------------Contact Us ---------------------
+.location{
+   width: 80%;
+   margin: auto;
+   margin-top: 60px;
+   margin-bottom: 100px;
+   text-align: center;
+}
+.location iframe{
+    width: 100%;
+}
+.contact-us{
+   width: 80%;
+   margin: auto;
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.contact-col div i{
+    font-size: 28px;
+    color: #f44336;
+    margin-right: 30px;
+}
+.contact-col div p{
+    padding: 0;
+}
+.contact-us .contact-us-row{
+    display: flex;
+    align-items: center;
+}
+.contact-col{
+    flex-basis: 48%;
+}
+.contact-col input,.contact-col textarea{
+    display: block;
+    width: 100%;
+    margin-bottom: 17px;
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+.btn-send-msg{
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: tomato;
+    border: 1px solid tomato;
+    transition: 0.5s;
+}
+.btn-send-msg:hover {
+  background-color: tomato;
+  color: white;
+}
+@media screen and (max-width:700px) {
+    .contact-us-row{
+        flex-direction: column;
+    }
+    .contact-col{
+        flex-basis: 100%;
+    }
+}

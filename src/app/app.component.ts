@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ApiService} from 'src/app/api.service'
 
 @Component({
   selector: 'app-root',
@@ -6,24 +7,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'mail_subscription_with_google';
-  ngOnInit(){
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxZCmvQLD3ScBlR83-Y9eyD_dAmOKPkBdNyno5LvDgMwcHZl_KOzRddtTo5QXfu35ck/exec';
-    const newLocal:any = 'submit-to-google-sheet';
-    const form = document.forms[newLocal];
-    const msg:any =document.getElementById("msg");
-    form.addEventListener('submit', function (e:any) {
-        debugger;
-        e.preventDefault();
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-          .then(response => {
-            msg.innerHTML='Thank You For subscribing!'
-            setTimeout(function(){
-              msg.innerHTML="";
-            },3000)
-           form.reset()
-          })
-          .catch(error => console.error('Error!', error.message));
-      })
+  title(title: any) {
+    throw new Error('Method not implemented.');
   }
+  PieChart:any=[];
+  constructor() { }
+
+  ngOnInit(): void {
+  
+  var close:any=document.getElementById("close");
+  var navLinks:any=document.getElementById("navLinks");
+   close.onclick=function(){
+    debugger    
+    navLinks.style.right="-200px";
+   }
+  }
+  open(){
+    debugger
+    var navLinks:any=document.getElementById("navLinks");
+    navLinks.style.right="0px";
+  }
+
 }
